@@ -13,9 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-})->name('homepage');
+Route::get('/', 'HomeController@index')->name('homepage');
 
 Route::get('/caratteri', function () {
     $data = [
@@ -52,10 +50,6 @@ Route::get('/supporters', function () {
     return view('FANS');
 })->name('supporters');
 
-Route::get('/novità', function () {
-    return view('NEWS');
-})->name('novità');
+Route::get('/novità', 'HomeController@news')->name('novità');
 
-Route::get('/negozio', function () {
-    return view('SHOP');
-})->name('negozio');
+Route::get('/negozio', 'HomeController@shop')->name('negozio');
