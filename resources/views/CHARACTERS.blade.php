@@ -26,6 +26,8 @@
             <a href="{{ route('novità')}}">NEWS</a>
             <a href="{{ route('negozio')}}">SHOP</a>
         </div>
+
+        <h2>{{ $title}}</h2>
           
     </body>
 </html>

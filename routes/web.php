@@ -18,7 +18,10 @@ Route::get('/', function () {
 })->name('homepage');
 
 Route::get('/caratteri', function () {
-    return view('CHARACTERS');
+    $data = [
+        'title' => 'pagina CHARACTERS'
+    ];
+    return view('CHARACTERS', $data);
 })->name('caratteri');
 
 Route::get('/fumetti', function () {
