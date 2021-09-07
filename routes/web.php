@@ -15,40 +15,21 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('homepage');
 
-Route::get('/caratteri', function () {
-    $data = [
-        'title' => 'pagina CHARACTERS'
-    ];
-    return view('CHARACTERS', $data);
-})->name('caratteri');
+Route::get('/caratteri', 'ComicController@caratteri')->name('caratteri');
 
-Route::get('/fumetti', function () {
-    return view('COMICS');
-})->name('fumetti');
+Route::get('/fumetti', 'ComicController@fumetti')->name('fumetti');
 
-Route::get('/films', function () {
-    return view('MOVIES');
-})->name('films');
+Route::get('/films', 'ComicController@film')->name('films');
 
-Route::get('/television', function () {
-    return view('TV');
-})->name('television');
+Route::get('/television', 'ComicController@vision')->name('television');
 
-Route::get('/giochi', function () {
-    return view('GAMES');
-})->name('giochi');
+Route::get('/giochi', 'ComicController@giochi')->name('giochi');
 
-Route::get('/collezionabili', function () {
-    return view('COLLECTIBLES');
-})->name('collezionabili');
+Route::get('/collezionabili', 'ComicController@meme')->name('collezionabili');
 
-Route::get('/video', function () {
-    return view('VIDEOS');
-})->name('video');
+Route::get('/video', 'ComicController@video')->name('video');
 
-Route::get('/supporters', function () {
-    return view('FANS');
-})->name('supporters');
+Route::get('/supporters', 'ComicController@fans')->name('supporters');
 
 Route::get('/novità', 'HomeController@news')->name('novità');
 
