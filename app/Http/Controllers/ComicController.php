@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ComicController extends Controller
 {
-    public  function caratteri() {
+    public  function caratteri($id) {
         $data = [
             'title' => 'pagina CHARACTERS'
         ];

@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', 'HomeController@index')->name('homepage');
 
-Route::get('/caratteri', 'ComicController@caratteri')->name('caratteri');
+Route::get('/caratteri/{id}', 'ComicController@caratteri')->name('caratteri');
 
 Route::get('/fumetti', 'ComicController@fumetti')->name('fumetti');
 
